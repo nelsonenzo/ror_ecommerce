@@ -56,9 +56,10 @@ gem 'will_paginate', '~> 3.0.4'
 gem 'zurb-foundation', '~> 4.3.2'
 
 group :production do
-  gem 'mysql2', '~> 0.3.12'
+  # gem 'mysql2', '~> 0.3.12'
   gem 'pg'
   gem 'rails_12factor'
+  gem 'thin'
 end
 
 group :development do
@@ -69,12 +70,14 @@ group :development do
   gem "autotest-rails-pure"
   gem "better_errors", '~> 0.9.0'
   gem "binding_of_caller", '~> 0.7.2'
-  gem 'debugger'#, '~> 1.6.1'
+  # gem 'debugger'#, '~> 1.6.1'
   gem "rails-erd"
 
   # YARD AND REDCLOTH are for generating yardocs
   gem 'yard'
   gem 'RedCloth'
+  gem 'capistrano', '~> 3.1.0'
+  gem 'capistrano-bundler', '~> 1.1.2'
 end
 group :test, :development do
   gem 'capybara', "~> 1.1"#, :git => 'git://github.com/jnicklas/capybara.git'
